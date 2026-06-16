@@ -1,0 +1,30 @@
+services:
+
+  flask-app:
+    build: .
+    container_name: flask-app
+
+    ports:
+      - "5000:5000"
+
+    environment:
+      DB_HOST: mysql-db
+
+    depends_on:
+      - mysql-db
+
+  mysql-db:
+    image: mysql:8.0
+
+    container_name: mysql-db
+
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: devopslab
+
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+volumes:
+  mysql-data:
+
