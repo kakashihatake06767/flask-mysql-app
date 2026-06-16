@@ -9,7 +9,7 @@ pipeline {
                 ssh dhrupal@app-server "
                 cd ~/flask-mysql-app &&
                 git pull &&
-                sudo docker compose up -d --build
+                docker compose up -d --build
                 "
                 '''
             }
