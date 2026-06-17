@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     return f"""
-    <h1>CI/CD Pipeline Working </h1>
+    <h1>Automatic Deployment Test </h1>
     <p>Flask Container Running</p>
     <p>Database Host: {os.getenv('DB_HOST')}</p>
     """
