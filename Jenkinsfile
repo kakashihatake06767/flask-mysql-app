@@ -1,7 +1,6 @@
 pipeline {
 agent any
 
-```
 stages {
 
     stage('Deploy Flask App') {
@@ -25,7 +24,6 @@ stages {
     }
 
 }
-```
 
 }
 
